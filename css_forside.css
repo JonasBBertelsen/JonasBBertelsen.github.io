@@ -78,8 +78,7 @@ h1 {
     font-family: 'Sansita', sans-serif;
     font-size: 60px;
 
-    -webkit-text-stroke: 0.1px #F4FEC1; /* OUTLINE rundt om teksten */
-    text-stroke: 3px #DD6E42;         /* (Standard, hvis browser understøtter det) */
+    -webkit-text-stroke: 1px #F4FEC1; /* OUTLINE rundt om teksten */
 
     font-weight: 700;
 }
