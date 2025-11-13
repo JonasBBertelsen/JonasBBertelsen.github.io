@@ -73,16 +73,14 @@ h1 {
     justify-content: center;
 }
 
+/* CV-tekst inde i knappen – fyld = baggrund, outline = CV-farve */
 .cv-text {
-    color: #DD6E42;                  /* Samme farve som baggrunden */
+    color: #F4FEC1;                 /* samme farve som baggrunden */
     font-family: 'Sansita', sans-serif;
     font-size: 60px;
-
-    -webkit-text-stroke: 1px #F4FEC1; /* OUTLINE rundt om teksten */
-
+    -webkit-text-stroke: 2px #DD6E42; /* outline i CV-farven */
     font-weight: 700;
 }
-
 
 /* Anden dekorativ cirkel */
 .dot2 {
@@ -111,12 +109,25 @@ button.dot {
     box-shadow: -5px 0 15px rgba(0,0,0,0.3);
     transition: right 0.5s ease;
     z-index: 3;
+    overflow-y: auto;
 }
 
 .sidepanel h2 {
     font-family: 'Sansita', sans-serif;
     font-size: 32px;
     margin-top: 0;
+}
+
+/* Indholdet i CV-panelet */
+.cv-section h3 {
+    font-family: 'Sansita', sans-serif;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.cv-section p {
+    line-height: 1.6;         /* linjeafstand */
+    margin-bottom: 12px;
 }
 
 /* Luk-knap i panelet */
