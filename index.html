@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <title>forside</title>
@@ -9,20 +9,67 @@
 
 <body>
 
-
 <header>
-  <h1 class="cv-overskrift">CV</h1>
-  <span class="dot dot1"></span>
+  <!-- Cirklen med CV-tekst som knap -->
+  <button class="dot dot1" id="menuButton" aria-label="Åbn CV-panel">
+    <span class="cv-text">CV</span>
+  </button>
 </header>
 
 
-<img src="Mig_jobansøgning.png" alt="Profilbillede af Jonas" class="profilbillede">
-<h1 class="navn">Jonas Bredall Bertelsen</h1>
+<!-- Sidepanel der glider ind fra højre og fylder halvdelen af skærmen -->
+<div class="sidepanel" id="sidepanel">
+  <button class="close-btn" id="closePanel" aria-label="Luk CV-panel">&times;</button>
+  <h2>My CV</h2>
+  <p>
+    <h3>Core Competencies </h3>
+    <br /><br />
 
-<div class="circles">
-  <span class="dot dot2"></span>
+    <b>UX & Human-Centered Design:</b> <br />
+    Practical experience in designing user-focused solutions through research, prototyping, and usability testing
+    <br /><br />
+    <b>Communication & Interpersonal Skills:</b> <br />
+    Effectively convey complex information to diverse audiences while building positive relationships
+    <br /><br />
+    <b>Technical Support & IT Proficiency:</b> <br />
+    Skilled in troubleshooting and providing guidance to ensure smooth IT operations
+    <br /><br />
+    <b>Organizational & Process Management:</b> <br />
+    Experienced in managing operations, coordinating workflows, and implementing improvements
+    </b><br /><br />
+    <b>Adaptability & Teamwork:</b> <br />
+    Flexible and reliable, thriving in diverse environments and supporting team goals
+
+  </p>
 </div>
 
+<!-- Resten af indholdet på siden -->
+<div class="page-content">
+  <img src="Mig_jobansøgning.png" alt="Profilbillede af Jonas" class="profilbillede">
+  <h1 class="navn">Jonas Bredall Bertelsen</h1>
+
+  <div class="circles">
+    <span class="dot dot2"></span>
+  </div>
+</div>
+
+<!-- JavaScript til at åbne/lukke panelet -->
+<script>
+  const btn = document.getElementById('menuButton');
+  const panel = document.getElementById('sidepanel');
+  const closeBtn = document.getElementById('closePanel');
+  const pageContent = document.querySelector('.page-content');
+  const header = document.querySelector('header');
+
+  function togglePanel() {
+    panel.classList.toggle('open');
+    pageContent.classList.toggle('shifted');
+    header.classList.toggle('shifted');
+  }
+
+  btn.addEventListener('click', togglePanel);
+  closeBtn.addEventListener('click', togglePanel);
+</script>
 
 </body>
 </html>
